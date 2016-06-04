@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{24E50ED0-E6C1-484C-9986-33EFDE1287EB}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{F20DB563-D18A-4237-B4F8-5F3A7D32BBEF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Twitter.Common</RootNamespace>
-    <AssemblyName>Twitter.Common</AssemblyName>
+    <RootNamespace>Twitter.Console</RootNamespace>
+    <AssemblyName>Twitter.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,10 +43,6 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,28 +51,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config\DryIocRegister.cs" />
-    <Compile Include="DryIoc\AsyncExecutionFlowScopeContext.cs" />
-    <Compile Include="DryIoc\Container.cs" />
-    <Compile Include="DryIoc\FactoryCompiler.cs" />
-    <Compile Include="DryIoc\ImTools.cs" />
-    <Compile Include="DryIoc\WebApi\DryIocWebApi.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Twitter.Core\Twitter.Core.csproj">
-      <Project>{64d3b1c1-bfea-4ce2-b48d-2d9f0bcb73d6}</Project>
-      <Name>Twitter.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Twitter.Data.FlatFile\Twitter.Data.FlatFile.csproj">
-      <Project>{c5b5c747-7a94-41bf-b18f-9a86a51db52e}</Project>
-      <Name>Twitter.Data.FlatFile</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Twitter.WebService.Data.FlatFile\Twitter.Data.csproj">
-      <Project>{6b2b0b8e-018e-453a-8a89-4343d5fedfd1}</Project>
+      <Project>{6B2B0B8E-018E-453A-8A89-4343D5FEDFD1}</Project>
       <Name>Twitter.Data</Name>
     </ProjectReference>
   </ItemGroup>
