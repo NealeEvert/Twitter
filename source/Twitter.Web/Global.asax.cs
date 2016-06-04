@@ -3,8 +3,6 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Http;
-using DryIoc;
-using DryIoc.WebApi;
 
 namespace Twitter.Web
 {
@@ -15,7 +13,7 @@ namespace Twitter.Web
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            RouteConfig.RegisterRoutes(RouteTable.Routes); 
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
     }
 }

@@ -38,10 +38,10 @@ namespace Twitter.Data.FlatFile.Implementation
             var usersAndTweets = new List<KeyValuePair<string, string>>();
             var lines = _fileDataReader.GetFileData(ConfigurationSettings.TweetsDataFilePathKey);
 
-            foreach (var line in lines.Select(l => l.Split(new[] { UserTweetSeparator }, StringSplitOptions.RemoveEmptyEntries)))
+            foreach (var line in lines.Where(l => l.Contains(UserTweetSeparator)).Select(l => l.Split(new[] { UserTweetSeparator }, StringSplitOptions.RemoveEmptyEntries)))
             {
                 var name = line[Field.Name];
-                var tweet = line[Field.Tweet];
+                var tweet = line[Field.Tweet].Trim();
 
                 usersAndTweets.Add(new KeyValuePair<string, string>(name, tweet));
             }

@@ -38,7 +38,7 @@ namespace Twitter.Data.FlatFile.Implementation
             var users = new Dictionary<string, List<string>>();
 
             var lines = _fileDataReader.GetFileData(ConfigurationSettings.UsersDataFilePathKey);
-            foreach (var line in lines.Select(l => l.Split(new[] { UserFollowingSeparator }, StringSplitOptions.RemoveEmptyEntries)))
+            foreach (var line in lines.Where(l => l.Contains(UserFollowingSeparator)).Select(l => l.Split(new[] { UserFollowingSeparator }, StringSplitOptions.RemoveEmptyEntries)))
             {
                 List<string> userFollows;
                 var name = line[Field.Name].Trim();

@@ -171,7 +171,7 @@
       <Project>{64D3B1C1-BFEA-4CE2-B48D-2D9F0BCB73D6}</Project>
       <Name>Twitter.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Twitter.WebService.Data.FlatFile\Twitter.Data.csproj">
+    <ProjectReference Include="..\Twitter.Data\Twitter.Data.csproj">
       <Project>{6B2B0B8E-018E-453A-8A89-4343D5FEDFD1}</Project>
       <Name>Twitter.Data</Name>
     </ProjectReference>

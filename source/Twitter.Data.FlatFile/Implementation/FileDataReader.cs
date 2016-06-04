@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Text;
 using Twitter.Core;
 using Twitter.Core.Config;
 using Twitter.Data.FlatFile.Interfaces;
@@ -21,8 +22,7 @@ namespace Twitter.Data.FlatFile.Implementation
 
         public string[] GetFileData(string configurationKey)
         {
-            //TODO: Needs to take into account ASCII 7-Bit file encoding
-            return File.ReadAllLines(GetFilePath(configurationKey));
+            return File.ReadAllLines(GetFilePath(configurationKey), Encoding.ASCII);
         }
 
         private string GetFilePath(string key)

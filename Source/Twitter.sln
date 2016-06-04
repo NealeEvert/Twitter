@@ -5,13 +5,11 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Common", "Twitter.Common\Twitter.Common.csproj", "{24E50ED0-E6C1-484C-9986-33EFDE1287EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Data", "Twitter.WebService.Data.FlatFile\Twitter.Data.csproj", "{6B2B0B8E-018E-453A-8A89-4343D5FEDFD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Data", "Twitter.Data\Twitter.Data.csproj", "{6B2B0B8E-018E-453A-8A89-4343D5FEDFD1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Console.Logic", "Twitter.Console.Logic\Twitter.Console.Logic.csproj", "{C9F65F6C-9B5D-4447-B0EE-1FBDA5D1A386}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Console.Test", "Twitter.Console.Test\Twitter.Console.Test.csproj", "{FBBB3F1F-BFD5-4855-9BCA-C16A0354903C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Console.Test.SpecFlow", "Twitter.Console.Test.Spec\Twitter.Console.Test.SpecFlow.csproj", "{E55D7E01-C654-47F9-B262-C824B4EBC8D8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Data.FlatFile", "Twitter.Data.FlatFile\Twitter.Data.FlatFile.csproj", "{C5B5C747-7A94-41BF-B18F-9A86A51DB52E}"
 EndProject
@@ -19,9 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Core", "Twitter.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Web", "Twitter.Web\Twitter.Web.csproj", "{58060EE4-C3DF-409A-93F9-9E161D297B88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Web.Tests", "Twitter.Web.Tests\Twitter.Web.Tests.csproj", "{61BA1AEF-201C-4C81-BFB3-ADEB82104EEE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Console", "Twitter.Console\Twitter.Console.csproj", "{F20DB563-D18A-4237-B4F8-5F3A7D32BBEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Tests", "Twitter.Tests\Twitter.Tests.csproj", "{067456C0-086C-46A8-B37F-1405717B7BFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,10 +43,6 @@ Global
 		{FBBB3F1F-BFD5-4855-9BCA-C16A0354903C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBBB3F1F-BFD5-4855-9BCA-C16A0354903C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBBB3F1F-BFD5-4855-9BCA-C16A0354903C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E55D7E01-C654-47F9-B262-C824B4EBC8D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E55D7E01-C654-47F9-B262-C824B4EBC8D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E55D7E01-C654-47F9-B262-C824B4EBC8D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E55D7E01-C654-47F9-B262-C824B4EBC8D8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C5B5C747-7A94-41BF-B18F-9A86A51DB52E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C5B5C747-7A94-41BF-B18F-9A86A51DB52E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5B5C747-7A94-41BF-B18F-9A86A51DB52E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -61,14 +55,14 @@ Global
 		{58060EE4-C3DF-409A-93F9-9E161D297B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58060EE4-C3DF-409A-93F9-9E161D297B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58060EE4-C3DF-409A-93F9-9E161D297B88}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61BA1AEF-201C-4C81-BFB3-ADEB82104EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61BA1AEF-201C-4C81-BFB3-ADEB82104EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61BA1AEF-201C-4C81-BFB3-ADEB82104EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61BA1AEF-201C-4C81-BFB3-ADEB82104EEE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F20DB563-D18A-4237-B4F8-5F3A7D32BBEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F20DB563-D18A-4237-B4F8-5F3A7D32BBEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F20DB563-D18A-4237-B4F8-5F3A7D32BBEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F20DB563-D18A-4237-B4F8-5F3A7D32BBEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{067456C0-086C-46A8-B37F-1405717B7BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{067456C0-086C-46A8-B37F-1405717B7BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{067456C0-086C-46A8-B37F-1405717B7BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{067456C0-086C-46A8-B37F-1405717B7BFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

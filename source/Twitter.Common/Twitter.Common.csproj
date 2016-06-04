@@ -72,7 +72,7 @@
       <Project>{c5b5c747-7a94-41bf-b18f-9a86a51db52e}</Project>
       <Name>Twitter.Data.FlatFile</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Twitter.WebService.Data.FlatFile\Twitter.Data.csproj">
+    <ProjectReference Include="..\Twitter.Data\Twitter.Data.csproj">
       <Project>{6b2b0b8e-018e-453a-8a89-4343d5fedfd1}</Project>
       <Name>Twitter.Data</Name>
     </ProjectReference>
