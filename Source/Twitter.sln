@@ -18,6 +18,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Web", "Twitter.Web\Twitter.Web.csproj", "{58060EE4-C3DF-409A-93F9-9E161D297B88}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Console", "Twitter.Console\Twitter.Console.csproj", "{F20DB563-D18A-4237-B4F8-5F3A7D32BBEF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{58060EE4-C3DF-409A-93F9-9E161D297B88} = {58060EE4-C3DF-409A-93F9-9E161D297B88}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Tests", "Twitter.Tests\Twitter.Tests.csproj", "{067456C0-086C-46A8-B37F-1405717B7BFC}"
 EndProject
