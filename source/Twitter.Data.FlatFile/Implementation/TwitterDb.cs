@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Twitter.Core.Config;
-using Twitter.Data.Entities;
 using Twitter.Data.FlatFile.Interfaces;
 using Twitter.Data.Interfaces;
+using Twitter.Data.SharedEntities.Entities;
 
 namespace Twitter.Data.FlatFile.Implementation
 {

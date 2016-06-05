@@ -6,8 +6,14 @@ using Twitter.Data.FlatFile.Interfaces;
 
 namespace Twitter.Tests.Data.FlatFile
 {
-    public class TwitterTweetDbTests
+    public class TwitterTweetDbTests : BaseTest
     {
+        [SetUp]
+        public void SetUp()
+        {
+            Initialize();
+        }
+
         [Test]
         public void StringDataNotInRequiredFormat()
         {

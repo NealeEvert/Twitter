@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,8 +41,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\ConfigurationSettings.cs" />
+    <Compile Include="Config\Factory.cs" />
+    <Compile Include="Config\Initializer.cs" />
+    <Compile Include="Interfaces\ITwitterDataCollector.cs" />
+    <Compile Include="Interfaces\ITwitterPrinter.cs" />
+    <Compile Include="Implementation\TwitterDataCollector.cs" />
+    <Compile Include="Implementation\TwitterPrinter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Twitter.Common\Twitter.Common.csproj">
+      <Project>{24e50ed0-e6c1-484c-9986-33efde1287eb}</Project>
+      <Name>Twitter.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twitter.Core\Twitter.Core.csproj">
+      <Project>{64D3B1C1-BFEA-4CE2-B48D-2D9F0BCB73D6}</Project>
+      <Name>Twitter.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twitter.Data.Shared\Twitter.Data.Shared.csproj">
+      <Project>{61BA0843-17BF-4C3A-B9BC-98C67AACC673}</Project>
+      <Name>Twitter.Data.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twitter.Data\Twitter.Data.csproj">
+      <Project>{6B2B0B8E-018E-453A-8A89-4343D5FEDFD1}</Project>
+      <Name>Twitter.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

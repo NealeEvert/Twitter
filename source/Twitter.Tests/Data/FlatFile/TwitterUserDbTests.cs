@@ -6,8 +6,14 @@ using Twitter.Data.FlatFile.Interfaces;
 namespace Twitter.Tests.Data.FlatFile
 {
     [TestFixture]
-    public class TwitterUserDbTests
+    public class TwitterUserDbTests : BaseTest
     {
+        [SetUp]
+        public void SetUp()
+        {
+            Initialize();
+        }
+
         [Test]
         public void StringDataNotInRequiredFormat()
         {
@@ -17,6 +23,18 @@ namespace Twitter.Tests.Data.FlatFile
 
             var twitterUserDb = new TwitterUserDb(fileDataReaderMock.Object);
             twitterUserDb.GetUsersAndFollowers();
+        }
+        [Test]
+        public void HandleEmptyFile()
+        {
+            var returnValue = new string[0];
+            var fileDataReaderMock = new Mock<IFileDataReader>();
+            fileDataReaderMock.Setup(mock => mock.GetFileData(It.IsAny<string>())).Returns(returnValue);
+
+            var twitterUserDb = new TwitterUserDb(fileDataReaderMock.Object);
+            var ret = twitterUserDb.GetUsersAndFollowers();
+
+            Assert.AreEqual(ret.Count, 0);
         }
 
         [Test]

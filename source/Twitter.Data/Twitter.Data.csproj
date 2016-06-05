@@ -40,8 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Tweet.cs" />
-    <Compile Include="Entities\User.cs" />
     <Compile Include="Interfaces\ITwitterDb.cs" />
     <Compile Include="Interfaces\ITwitterRepository.cs" />
     <Compile Include="Implementations\TwitterRepository.cs" />
@@ -51,6 +49,10 @@
     <ProjectReference Include="..\Twitter.Core\Twitter.Core.csproj">
       <Project>{64D3B1C1-BFEA-4CE2-B48D-2D9F0BCB73D6}</Project>
       <Name>Twitter.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twitter.Data.Shared\Twitter.Data.Shared.csproj">
+      <Project>{61BA0843-17BF-4C3A-B9BC-98C67AACC673}</Project>
+      <Name>Twitter.Data.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

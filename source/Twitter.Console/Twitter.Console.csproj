@@ -38,6 +38,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -59,6 +60,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Twitter.Console.Logic\Twitter.Console.Logic.csproj">
+      <Project>{C9F65F6C-9B5D-4447-B0EE-1FBDA5D1A386}</Project>
+      <Name>Twitter.Console.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twitter.Core\Twitter.Core.csproj">
+      <Project>{64D3B1C1-BFEA-4CE2-B48D-2D9F0BCB73D6}</Project>
+      <Name>Twitter.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twitter.Data.Shared\Twitter.Data.Shared.csproj">
+      <Project>{61BA0843-17BF-4C3A-B9BC-98C67AACC673}</Project>
+      <Name>Twitter.Data.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Twitter.Data\Twitter.Data.csproj">
       <Project>{6B2B0B8E-018E-453A-8A89-4343D5FEDFD1}</Project>
       <Name>Twitter.Data</Name>

@@ -6,6 +6,9 @@ using Twitter.Data.FlatFile.Interfaces;
 
 namespace Twitter.Data.FlatFile.Implementation
 {
+    /// <summary>
+    /// Flat file data reader
+    /// </summary>
     public class FileDataReader : IFileDataReader
     {
         private readonly IConfigurationManager _configurationManager;
@@ -20,6 +23,11 @@ namespace Twitter.Data.FlatFile.Implementation
             _configurationManager = configurationManager;
         }
 
+        /// <summary>
+        /// Reads data from a flat file
+        /// </summary>
+        /// <param name="configurationKey">Configuration key that holds the path to the file</param>
+        /// <returns>Array of lines read from the file</returns>
         public string[] GetFileData(string configurationKey)
         {
             return File.ReadAllLines(GetFilePath(configurationKey), Encoding.ASCII);

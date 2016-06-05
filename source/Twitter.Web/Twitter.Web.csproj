@@ -138,7 +138,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\TwitterUserController.cs" />
+    <Compile Include="Controllers\TwitterFeedController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -170,6 +170,10 @@
     <ProjectReference Include="..\Twitter.Core\Twitter.Core.csproj">
       <Project>{64D3B1C1-BFEA-4CE2-B48D-2D9F0BCB73D6}</Project>
       <Name>Twitter.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twitter.Data.Shared\Twitter.Data.Shared.csproj">
+      <Project>{61BA0843-17BF-4C3A-B9BC-98C67AACC673}</Project>
+      <Name>Twitter.Data.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\Twitter.Data\Twitter.Data.csproj">
       <Project>{6B2B0B8E-018E-453A-8A89-4343D5FEDFD1}</Project>

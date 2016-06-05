@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Data", "Twitter.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Console.Logic", "Twitter.Console.Logic\Twitter.Console.Logic.csproj", "{C9F65F6C-9B5D-4447-B0EE-1FBDA5D1A386}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Console.Test", "Twitter.Console.Test\Twitter.Console.Test.csproj", "{FBBB3F1F-BFD5-4855-9BCA-C16A0354903C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Console.Test.SpecFlow", "Twitter.Console.Test.SpecFlow\Twitter.Console.Test.SpecFlow.csproj", "{FBBB3F1F-BFD5-4855-9BCA-C16A0354903C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Data.FlatFile", "Twitter.Data.FlatFile\Twitter.Data.FlatFile.csproj", "{C5B5C747-7A94-41BF-B18F-9A86A51DB52E}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Console", "Twitter.Console\Twitter.Console.csproj", "{F20DB563-D18A-4237-B4F8-5F3A7D32BBEF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Tests", "Twitter.Tests\Twitter.Tests.csproj", "{067456C0-086C-46A8-B37F-1405717B7BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Data.Shared", "Twitter.Data.Shared\Twitter.Data.Shared.csproj", "{61BA0843-17BF-4C3A-B9BC-98C67AACC673}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{067456C0-086C-46A8-B37F-1405717B7BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{067456C0-086C-46A8-B37F-1405717B7BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{067456C0-086C-46A8-B37F-1405717B7BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61BA0843-17BF-4C3A-B9BC-98C67AACC673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61BA0843-17BF-4C3A-B9BC-98C67AACC673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61BA0843-17BF-4C3A-B9BC-98C67AACC673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61BA0843-17BF-4C3A-B9BC-98C67AACC673}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

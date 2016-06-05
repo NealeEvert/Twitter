@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Twitter.Console.Test")]
+[assembly: AssemblyTitle("Twitter.Data.Shared")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Twitter.Console.Test")]
+[assembly: AssemblyProduct("Twitter.Data.Shared")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fbbb3f1f-bfd5-4855-9bca-c16a0354903c")]
+[assembly: Guid("61ba0843-17bf-4c3a-b9bc-98c67aacc673")]
 
 // Version information for an assembly consists of the following four values:
 //

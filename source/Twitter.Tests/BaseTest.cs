@@ -1,4 +1,8 @@
-﻿using DryIoc;
+﻿using System.Web.Http;
+using DryIoc;
+using DryIoc.WebApi;
+using Twitter.Core.Implementation;
+using Twitter.Core.Interfaces;
 
 namespace Twitter.Tests
 {
@@ -6,7 +10,11 @@ namespace Twitter.Tests
     {
         private Container _container;
 
-        protected Container Container
+        public void Initialize()
+        {
+        }
+
+        internal Container Container
         {
             get
             {
@@ -21,7 +29,7 @@ namespace Twitter.Tests
 
         private void ConfigureContainer(Container container)
         {
-            
+            container.Register(typeof(ILogManager), typeof(LogManager));
         }
 
         public T Resolve<T>()

@@ -1,6 +1,7 @@
 ﻿using DryIoc;
 using Twitter.Core;
 using Twitter.Core.Implementation;
+using Twitter.Core.Interfaces;
 using Twitter.Data.FlatFile.Implementation;
 using Twitter.Data.FlatFile.Interfaces;
 using Twitter.Data.Implementations;
@@ -21,6 +22,7 @@ namespace Twitter.Common.Config
             container.Register(typeof(ITwitterDb), typeof(TwitterDb));
             container.Register(typeof(ITwitterRepository), typeof(TwitterRepository));
             container.Register(typeof(IConfigurationManager), typeof(ConfigurationManager));
+            container.Register(typeof(ILogManager), typeof(LogManager));
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Twitter.Data.Entities
+namespace Twitter.Data.SharedEntities.Entities
 {
     public class User
     {
