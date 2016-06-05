@@ -39,6 +39,8 @@ Notes
 1. Unit testing and SpecFlow testing does not cover 100% of the code. Test are only written for the Twitter.Data.FlatFile as a demostration of the unit testing framework and architecture of the solution.
 2. Code commenting is not extensive. Only in the Twitter.Data.FlatFile project as a demonstration of code comments.
 3. Logging is not extensive. Only in the Twitter.Data.FlatFile project as a demonstration of logging.
+4. No branching strategy was used in the project as it was not needed.
+5. No build scripts created.
 	
 
  
