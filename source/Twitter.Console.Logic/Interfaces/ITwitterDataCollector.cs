@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Twitter.Data.SharedEntities.Entities;
+using Twitter.Data.Shared.Entities;
 
 namespace Twitter.Console.Logic.Interfaces
 {

@@ -1,4 +1,4 @@
-﻿namespace Twitter.Data.SharedEntities.Entities
+﻿namespace Twitter.Data.Shared.Entities
 {
     public class Tweet
     {

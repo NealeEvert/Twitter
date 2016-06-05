@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using Twitter.Console.Logic.Config;
 using Twitter.Console.Logic.Interfaces;
+using Twitter.Data.Shared.Entities;
 
 namespace Twitter.Console.Logic.Implementation
 {
@@ -21,20 +23,29 @@ namespace Twitter.Console.Logic.Implementation
 
         public IList<string> PrintFeed()
         {
-            var users = _twitterDataCollector.GetTwitterFeed();
             var output = new List<string>();
-            foreach (var user in users.OrderBy(u => u.Name))
-            {
-                output.Add(user.Name);
-                output.Add(string.Empty);
-                var allTweets = user.Follows?.SelectMany(f => f.Tweets).Union(user.Tweets);
 
-                if (allTweets == null) continue;
-                foreach (var tweet in allTweets.OrderBy(t => t.Order))
+            try
+            {
+                var users = _twitterDataCollector.GetTwitterFeed();
+
+                foreach (var user in users.OrderBy(u => u.Name))
                 {
-                    output.Add($"@{tweet.Name}: {tweet.Message}");
+                    output.Add(user.Name);
                     output.Add(string.Empty);
+                    var allTweets = user.Follows?.SelectMany(f => f.Tweets).Union(user.Tweets);
+
+                    if (allTweets == null) continue;
+                    foreach (var tweet in allTweets.OrderBy(t => t.Order))
+                    {
+                        output.Add($"@{tweet.Name}: {tweet.Message}");
+                        output.Add(string.Empty);
+                    }
                 }
+            }
+            catch (WebException ex)
+            {
+                output.Add(ex.Message);
             }
 
             return output;

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Twitter.Core.Config;
 using Twitter.Data.Interfaces;
-using Twitter.Data.SharedEntities.Entities;
+using Twitter.Data.Shared.Entities;
 
 namespace Twitter.Data.Implementations
 {

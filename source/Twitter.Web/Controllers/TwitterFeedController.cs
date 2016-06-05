@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Web.Http;
 using Twitter.Core.Config;
-using Twitter.Data.SharedEntities.Entities;
+using Twitter.Data.Shared.Entities;
 using Twitter.Web.Models;
 
 namespace Twitter.Web.Controllers

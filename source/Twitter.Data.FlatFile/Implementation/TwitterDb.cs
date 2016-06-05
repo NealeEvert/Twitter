@@ -3,7 +3,7 @@ using System.Linq;
 using Twitter.Core.Config;
 using Twitter.Data.FlatFile.Interfaces;
 using Twitter.Data.Interfaces;
-using Twitter.Data.SharedEntities.Entities;
+using Twitter.Data.Shared.Entities;
 
 namespace Twitter.Data.FlatFile.Implementation
 {

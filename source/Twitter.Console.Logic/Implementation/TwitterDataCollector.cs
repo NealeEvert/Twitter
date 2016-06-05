@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using System.Web.Script.Serialization;
 using Twitter.Console.Logic.Config;
 using Twitter.Console.Logic.Interfaces;
 using Twitter.Core;
-using Twitter.Data.SharedEntities.Entities;
+using Twitter.Data.Shared.Entities;
 
 namespace Twitter.Console.Logic.Implementation
 {
@@ -17,7 +18,15 @@ namespace Twitter.Console.Logic.Implementation
 
         public IList<User> GetTwitterFeed()
         {
-            RunAsync().Wait();
+            try
+            {
+                RunAsync().Wait();
+            }
+            catch (Exception ex)
+            {
+                throw new WebException(ex.Message, ex);
+            }
+
             return Users;
         }
 
@@ -34,6 +43,10 @@ namespace Twitter.Console.Logic.Implementation
                 {
                     var data = await response.Content.ReadAsStringAsync();
                     Users = new JavaScriptSerializer().Deserialize<List<User>>(data);
+                }
+                else
+                {
+                    throw new WebException(response.ReasonPhrase);
                 }
             }
         }

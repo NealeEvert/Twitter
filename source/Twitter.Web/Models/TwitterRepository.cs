@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Twitter.Data.SharedEntities.Entities;
+using Twitter.Data.Shared.Entities;
 
 namespace Twitter.Web.Models
 {
